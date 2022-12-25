@@ -1,0 +1,25 @@
+//Program for comparing two strings (User defined function)
+#include <stdio.h>
+
+int main(void) {
+int i,j,k=0;
+char s1[100],s2[100];
+gets(s1);
+gets(s2);
+for(i=0;s1[i]!='\0';i++)
+{
+   if(s1[i]!=s2[i])
+   {
+       k=1;
+       break;
+   }
+}
+if(k==1)
+{
+    printf("both strings are not equal");
+}
+else{
+    printf("both strings are equal");
+}
+return 0;
+}

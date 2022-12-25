@@ -1,0 +1,19 @@
+//Program for finding all suffixes of a string
+#include <stdio.h>
+
+int main(void) {
+int i,j,k;
+char s1[100];
+gets(s1);
+for(k=0;s1[k]!='\0';k++);
+for(i=0;i<k;i++)
+{
+    for(j=k-i-1;j<k;j++)
+    {
+        printf("%c",s1[j]);
+    }
+    printf("\n");
+}
+
+	return 0;
+}

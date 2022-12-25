@@ -1,0 +1,47 @@
+//Matrix rotation anti-clockwise at 90 degrees
+
+#include <stdio.h>
+
+int main()
+{
+   int i,j,a[3][3],temp,n,k;
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   {
+       for(j=0;j<n;j++)
+       {
+           scanf("%d",&a[i][j]);
+       }
+   }
+   for(i=0;i<n;i++)
+   {
+       for(j=i;j<n;j++)
+       {
+           temp=a[i][j];
+           a[i][j]=a[j][i];
+           a[j][i]=temp;
+       }
+   }
+   for(i=0;i<n;i++)
+   {
+       k=n-1;
+       for(j=0;j<n/2;j++)
+       {
+           temp=a[j][i];
+           a[j][i]=a[k][i];
+           a[k][i]=temp;
+           k--;
+       }
+   }
+   for(i=0;i<n;i++)
+   {
+       for(j=0;j<n;j++)
+       {
+           printf("%d",a[i][j]);
+           
+       }
+       printf("\n");
+   }
+
+    return 0;
+}

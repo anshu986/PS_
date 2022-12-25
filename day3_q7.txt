@@ -1,0 +1,21 @@
+Write a program to find the sum of the series using the function. a) 1/1!-2/3!+3/5!-4/7!+…
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+    int i,j,n;
+   float fact,sum=0;
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+   {
+       fact=1;
+       for(j=2*i-1;j>0;j--)
+       {
+           fact=fact*j;
+       }
+       sum=sum+(pow(-1,i+1)*(i/fact));
+   }
+   printf("%f",sum);
+
+}

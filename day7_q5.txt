@@ -1,0 +1,26 @@
+//Program for converting all lower case letters to upper case and vice versa in the given sentence
+#include <stdio.h>
+
+int main(void) {
+int i,j;
+char s[100];
+gets(s);
+for(i=0;s[i]!='\0';i++)
+{
+    if(s[i]>='a'&&s[i]<='z')
+    {
+        printf("%c",s[i]-32);
+    }
+    else if(s[i]>='A'&&s[i]<='Z')
+    {
+        printf("%c",s[i]+32);
+    }
+    else if(s[i]==' ')
+    {
+        printf("%c",s[i]);
+    }
+}
+
+return 0;
+}
+

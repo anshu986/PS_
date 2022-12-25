@@ -1,0 +1,19 @@
+//Program for character by character frequency count
+#include <stdio.h>
+
+int main(void) {
+	int j,k;
+	char i,s[100];
+	gets(s);
+	for(i='a';i<='z';i++)
+	{
+	    k=0;
+	    for(j=0;s[j]!='\0';j++)
+	    {
+	        if(i==s[j])
+	        k++;
+	    }
+	    printf("Charcter %c occurs %d times\n",i,k);
+	}
+	return 0;
+}

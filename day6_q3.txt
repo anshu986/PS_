@@ -1,0 +1,62 @@
+//To check if the given matrix is Magic Matrix
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j,a[3][3],sumrow=0,sumcol=0,sumdia=0,f;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+         scanf("%d",&a[i][j]);  
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+         if(i==j)
+         {
+             sumdia+=a[i][j];
+         }
+        }
+    }
+    printf("%d\n",sumdia);
+     for(i=0;i<3;i++)
+    {
+        sumrow=0;
+        for(j=0;j<3;j++)
+        {
+             sumrow+=a[i][j];
+         }
+          printf("%d\n",sumrow);
+         if (sumrow!=sumdia)
+         {
+             f=0;
+             break;
+         }
+        
+    }
+     for(i=0;i<3;i++)
+    {
+        sumcol=0;
+        for(j=0;j<3;j++)
+        {
+             sumcol+=a[j][i];
+         }
+           printf("%d\n",sumcol);
+
+         if (sumcol!=sumdia)
+         {
+             f=0;
+             break;
+         }
+    }
+    if(f==0)
+    printf("not a Magic matrix");
+    else
+    printf("Magic matrix");
+    
+}
+

@@ -1,0 +1,28 @@
+//Program for finding if the given string is a palindrome
+#include <stdio.h>
+
+int main(void) {
+int i,n,k=0;
+char s[10],a[10];
+gets(s);
+for(n=0;s[n]!='\0';n++);
+for(i=0;i<n;i++)
+{
+    a[n-i-1]=s[i];
+}
+
+for(i=0;i<n;i++)
+{
+    if(s[i]!=a[i])
+    {
+        k=1;
+        break;
+    }
+}
+if(k==1)
+printf("not");
+else
+printf("pallindrome");
+return 0;
+}
+

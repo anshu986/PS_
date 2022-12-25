@@ -1,0 +1,17 @@
+//Given two numbers A and B, find Kth digit from right of A to the power B.
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+int i,j,k,n,b,r;
+scanf("%d",&n);
+scanf("%d%d",&k,&b);
+for(i=0;i<k;i++)
+{
+    r=n%10;
+    n=n/10;
+}
+j=pow(r,b);
+printf("%d",j);
+return 0;
+}
